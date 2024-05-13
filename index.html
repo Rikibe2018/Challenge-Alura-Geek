@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceAPP</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/7de28f7640.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <img class="header__logo" src="./assets/corazones.png" alt="SpaceApp">
+        <h1>AluraGeek</h1>
+    </header>
+    <main>
+
+        <section class="agregar__productos">
+            <h1>Agregar</h1>
+            <h1>Productos:</h1>
+            <form class="agregar__productos__formulario" data-formulario>
+                <fieldset class="formulario__campo">
+                    <input name="nombre" id="nombre" class="campo__completo" type="text" minlength="3"
+                        placeholder="nombre..." required minlength="3" data-nombre />
+                    <span class="mensaje-error"></span>
+                </fieldset>
+
+                <fieldset class="formulario__campo">
+                    <input name="precio" id="precio" class="campo__completo" type="number" placeholder="precio..."
+                        required data-precio />
+                    <span class="mensaje-error"></span>
+                </fieldset>
+
+                <!-- pattern="\d+(\.\d{1,2})?" -->
+
+                <fieldset class="formulario__campo">
+                    <input name="imagen" id="imagen" class="campo__completo campo__completo--menor" type="text"
+                        minlength="8" placeholder="imagen..." required data-imagen />
+                    <span class="mensaje-error"></span>
+                </fieldset>
+
+
+                <div class="formulario__botones">
+                    <input value="Enviar" class="formulario__boton" id="enviar" data-boton-enviar type="submit" />
+                    <input value="Limpiar" class="formulario__boton" id="limpiar" data-boton-limpiar type="button" />
+                    <!-- <span class="mensaje-error"></span> -->
+                </div>
+            </form>
+            
+        </section>
+        
+        
+        <section class="mostrar__productos">
+            <h1>Mis Productos</h1>
+            <ul class="ul__mostrar__productos" data-productos>
+                <!--   <li class="card">
+                    <img src="./assets/producto_1.png" />
+                    <div class="card-container--info">
+                        <p>Stormtrooper</p>
+                        <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <i class="fa fa-trash-o" style="font-size:24px"></i>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="card">
+                    <img src="./assets/producto_2.jpeg" />
+                    <div class="card-container--info">
+                        <p>Game Boy Classic</p>
+                        <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <i class="fa fa-trash-o" style="font-size:24px"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="card">
+                    <img src="./assets/producto_1.png" />
+                    <div class="card-container--info">
+                        <p>Stormtrooper</p>
+                        <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <i class="fa fa-trash-o" style="font-size:24px"></i>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="card">
+                    <img src="./assets/producto_2.jpeg" />
+                    <div class="card-container--info">
+                        <p>Game Boy Classic</p>
+                        <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <i class="fa fa-trash-o" style="font-size:24px"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="card">
+                    <img src="./assets/producto_1.png" />
+                    <div class="card-container--info">
+                        <p>Stormtrooper</p>
+                        <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <i class="fa fa-trash-o" style="font-size:24px"></i>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="card">
+                    <img src="./assets/producto_2.jpeg" />
+                    <div class="card-container--info">
+                        <p>Game Boy Classic</p>
+                        <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <i class="fa fa-trash-o" style="font-size:24px"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="card">
+                    <img src="./assets/producto_2.jpeg" />
+                    <div class="card-container--info">
+                        <p>Game Boy Classic</p>
+                        <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <i class="fa fa-trash-o" style="font-size:24px"></i>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+        </section>
+        
+        <!-- <div id="toastBox"></div> -->
+      
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__logo">
+            <img class="header__logo" src="./assets/corazones.png" alt="SpaceApp">
+            <h1>AluraGeek</h1>
+        </div>
+        <div class="footer_texto">
+            <span>Desarrollado por Benitez Ricardo J.</span>
+            <span>ALURA LATAM - 2024</span>
+        </div>
+    </footer>
+    <script src="./js/main.js" type="module"></script>
+  >
+
+</body>
+
+</html>
