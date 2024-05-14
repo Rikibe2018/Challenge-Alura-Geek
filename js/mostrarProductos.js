@@ -21,6 +21,10 @@ async function listarProductos() {
     try {
 
         const listaProductosAPI = await conexionAPI.conexionDbProductos();
+        if (listaProductosAPI.length==0){
+            ulProductos.innerHTML = '<h2 class="mensaje__titulo">No existen Productos!!!</h2>'
+            return
+        }
         listaProductosAPI.forEach(productos => {
             ulProductos.appendChild(crearCard(
                 productos.nombre.substring(0, 20),
