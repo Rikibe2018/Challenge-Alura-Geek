@@ -9,6 +9,8 @@ let formateador = new Intl.NumberFormat('eng-US', {
     minimumFractionDigits: 2
 });
 
+
+
 await mostrarProductosAPI.listarProductos();
 await mostrarProductosAPI.iconosDelete();
 
@@ -26,11 +28,11 @@ function verificarCampo(campo) {
     if (campo.name == 'precio') {
         let valor = formateador.format(campo.value);
         valor = valor.substring(1);
-        console.log(valor);
+       // console.log(valor);
         campo.value = valor;
 
     }
-   
+
     tiposError.forEach(error => {
         if (campo.name == 'precio' && campo.value == 0) {
             campo.setCustomValidity("El precio no puede ser 0")
@@ -58,10 +60,10 @@ function limpiarFormulario() {
 const formulario = document.querySelector('[data-formulario]');
 const botonLimpiar = document.querySelector('[data-boton-limpiar]');
 
-formulario.addEventListener('submit', (e) => {
+formulario.addEventListener('submit',async (e) => {
     e.preventDefault();
-    crearProductosAPI.crearProducto(e);
-    
+    await crearProductosAPI.crearProducto(e);
+   // showAlert();
 });
 
 

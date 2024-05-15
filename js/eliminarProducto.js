@@ -6,7 +6,7 @@ async function eliminarProducto(evento) {
     if (respuesta) {
         await conexionAPI.eliminarProductos(id).then(response => {
             if (response.ok) {
-                alert('Producto Eliminado')
+                alert('Producto Eliminado');
             } else {
                 throw new Error("Ha ocurrido un error en eliminar Producto");
             }

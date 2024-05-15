@@ -6,7 +6,9 @@ async function conexionDbProductos() {
     return conexionConvertida;
 }
 
-async function agregarProductos(nombre, precio, imagen) {
+async function agregarProductos(nombre, precio, imagen, evento) {
+    //evento.preventDefault();
+    
     const conexion = await fetch('http://localhost:3001/productos', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -22,7 +24,7 @@ async function agregarProductos(nombre, precio, imagen) {
         alert("Ha ocurrido un error en agregar Producto")
         throw new Error("Ha ocurrido un error en agregar Producto");
     }
-    return 
+     return conexion; 
 }
 
 async function eliminarProductos(ide) {

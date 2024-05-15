@@ -10,7 +10,7 @@ async function crearProducto(evento) {
 
     try {
 
-        await conexionAPI.agregarProductos(nombre, precio, imagen);
+        await conexionAPI.agregarProductos(nombre, precio, imagen,evento);
         alert('Producto Ingresado con exito!!!!!');
         // llamar toast
     } catch (e) {
@@ -18,9 +18,7 @@ async function crearProducto(evento) {
         //llamar toast
     }
 
-
 }
-
 
 export const crearProductosAPI = {
     crearProducto,
